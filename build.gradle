@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "io.freefair.lombok" version "6.2.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'App.Main'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:3.0.1'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:3.0.2-b01'
+}
+
+test {
+    useJUnitPlatform()
+}
